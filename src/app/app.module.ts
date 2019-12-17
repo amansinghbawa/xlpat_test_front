@@ -9,12 +9,14 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule, MatPaginatorModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
+import { PatentDetailComponent } from './patent-detail/patent-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PatentsComponent,
-    HeaderComponent
+    HeaderComponent,
+    PatentDetailComponent
   ],
   imports: [
     BrowserModule,

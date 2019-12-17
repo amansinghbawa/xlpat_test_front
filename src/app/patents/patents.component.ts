@@ -4,7 +4,6 @@ import {MatTableDataSource} from '@angular/material/table';
 import { PatentsService } from '../patents.service';
 import { Patent } from '../patent';
 
-
 @Component({
   selector: 'app-patents',
   templateUrl: './patents.component.html',
@@ -28,7 +27,7 @@ export class PatentsComponent implements OnInit {
     this.getPatents();
   }
 
-    getPatents(): void {
+  getPatents(): void {
     this.patentService.getPatents()
         .subscribe(patents => this.dataSource.data = patents);
     this.dataSource.paginator = this.paginator;

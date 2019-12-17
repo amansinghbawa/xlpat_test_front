@@ -8,3 +8,7 @@ export class Patent {
   title: string;
   description: string;
 }
+
+export class PatentDetail {
+  description: string;
+}

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
-import { Patent } from './patent';
+import { Patent, PatentDetail } from './patent';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,7 @@ import { Patent } from './patent';
 export class PatentsService {
 
   private patentsUrl = environment.BASE_PATH + 'patents/';
+  private patentDetailUrl = environment.BASE_PATH + `patents/details/?`;
 
   constructor(
     private http: HttpClient
@@ -25,6 +26,12 @@ export class PatentsService {
       );
     }
 
+    getPatentDetails(policyNumber: string): Observable<PatentDetail> {
+      return this.http.get<PatentDetail>(this.patentDetailUrl + `policy_number=${policyNumber}`).pipe(
+        map(patents => patents),
+        tap( _ => this.log(`fetched patent details`))
+      );
+    }
 
     private log(message: string) {
       console.log(message);
