@@ -6,7 +6,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 li {
   font-size: smaller;
   margin: inherit;
-  color: rgb(85, 14, 14);
+  color: rgb(20, 0, 0);
+  margin-left: 30px;
 }
 
 section h2 {
@@ -15,4 +16,11 @@ section h2 {
 
 ul.description {
   color: rgba(49, 42, 42, 0.911);
+}
+
+div .description p {
+  font-size: smaller;
+  margin: 5px;
+  color: rgb(20, 0, 0);
+  margin-left: 30px;
 }
