@@ -1,0 +1,11 @@
+li {
+  font-size: smaller;
+}
+
+section h2 {
+  text-align: center !important;
+}
+
+ul.description {
+  color: blue;
+}

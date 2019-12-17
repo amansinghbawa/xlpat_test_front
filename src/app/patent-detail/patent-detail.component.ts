@@ -16,10 +16,11 @@ export class PatentDetailComponent implements OnInit {
   constructor(
     private patentService: PatentsService,
     private route: ActivatedRoute
-    ) { }
+    ) {
+      this.getPatentDetails();
+     }
 
   ngOnInit() {
-    this.getPatentDetails();
   }
 
   getPatentDetails(): void {

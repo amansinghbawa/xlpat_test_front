@@ -2,3 +2,17 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+li {
+  font-size: smaller;
+  margin: inherit;
+  color: rgb(85, 14, 14);
+}
+
+section h2 {
+  text-align: center !important;
+}
+
+ul.description {
+  color: rgba(49, 42, 42, 0.911);
+}
